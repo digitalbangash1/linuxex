@@ -148,3 +148,35 @@ ssh bandit5@bandit.labs.overthewire.org -p 2220
 After running this command, you'll be prompted for the password. Enter the password you found, and you should be logged in.   [source](https://overthewire.org/wargames/bandit/bandit5.html)
 
 ---
+
+## # Bandit Level 5 → Level 6
+
+The goal of the Bandit Level 6 on OverTheWire is to find the password for the next level. The password is stored in a file somewhere under the `inhere` directory and has all of the following properties:
+
+- It is human-readable
+- It is 1033 bytes in size
+- It is not executable[^47^]
+
+To find this file, you can use the `find` command, which is used for searching files and directories in Unix-based systems. You can specify the `inhere` directory as the starting point for the search, and use the `-type f` option to search for files. You can then use the `-readable`, `-size`, and `! -executable` options to match the properties specified in the level goal:
+
+```bash
+find inhere -type f -readable -size 1033c ! -executable
+```
+
+This command will list the path to the file that matches the specified properties. The `-size 1033c` option is used to search for files of exactly 1033 bytes in size (the `c` suffix stands for bytes).
+
+Once you have the path to the file, you can use the `cat` command to display its contents:
+
+```bash
+cat /path/to/file
+```
+
+Replace `/path/to/file` with the actual path to the file. This command will output the contents of the file, which should be the password for `bandit6`. You can then use this password to log into `bandit6` and proceed with the game.
+
+Here's the command to log into `bandit6` (replace `password` with the actual password you found):
+
+```bash
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+```
+
+After running this command, you'll be prompted for the password. Enter the password you found, and you should be logged in. [^47^]: [source](https://overthewire.org/wargames/bandit/bandit6.html)
