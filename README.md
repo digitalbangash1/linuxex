@@ -21,4 +21,24 @@ After running this command, you'll be prompted for the password. Enter `bandit0`
 
 Please note that if you're using Windows, you might need an SSH client like PuTTY to do this.
 
+## Bandit Level 1 [Link](https://overthewire.org/wargames/bandit/bandit1.html)
 
+The goal of the Bandit Level 1 on OverTheWire is to find the password for the next level. The password is stored in a file called `readme` located in the home directory. Once you find the password, you should use it to log into `bandit1` using SSH[^13^].
+
+To find the password, after you have logged into the game with the credentials for `bandit0`, you can use the `cat` command to read the `readme` file:
+
+```bash
+cat ~/readme
+```
+
+This command will output the contents of the `readme` file, which should be the password for `bandit1`. You can then use this password to log into `bandit1` and proceed with the game.
+
+Here's the command to log into `bandit1` (replace `password` with the actual password you found):
+
+```bash
+ssh bandit1@bandit.labs.overthewire.org -p 2220
+```
+
+After running this command, you'll be prompted for the password. Enter the password you found, and you should be logged in.
+
+[^13^]: [source](https://overthewire.org/wargames/bandit/bandit1.html)
