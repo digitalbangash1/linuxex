@@ -62,3 +62,32 @@ ssh bandit2@bandit.labs.overthewire.org -p 2220
 ```
 
 After running this command, you'll be prompted for the password. Enter the password you found, and you should be logged in.   [^21^]: [source](https://overthewire.org/wargames/bandit/bandit2.html)
+
+----
+## Bandit Level 3
+The goal of the Bandit Level 3 on OverTheWire is to find the password for the next level. The password is stored in a file named `spaces in this filename` located in the home directory[^27^].
+
+As the file has spaces in its name, you'll need to handle it properly when providing the filename to the `cat` command. In Unix-based systems, you can use backslashes (`\`) to escape the spaces:
+
+```bash
+cat spaces\ in\ this\ filename
+```
+
+Or you can use quotes around the filename:
+
+```bash
+cat "spaces in this filename"
+```
+
+Either of these commands will output the contents of the file `spaces in this filename`, which should be the password for `bandit3`. You can then use this password to log into `bandit3` and proceed with the game.
+
+Here's the command to log into `bandit3` (replace `password` with the actual password you found):
+
+```bash
+ssh bandit3@bandit.labs.overthewire.org -p 2220
+```
+
+After running this command, you'll be prompted for the password. Enter the password you found, and you should be logged in. [^27^]: [source](https://overthewire.org/wargames/bandit/bandit3.html)
+
+
+---
