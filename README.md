@@ -119,3 +119,32 @@ ssh bandit4@bandit.labs.overthewire.org -p 2220
 After running this command, you'll be prompted for the password. Enter the password you found, and you should be logged in.  [^33^]: [source](https://overthewire.org/wargames/bandit/bandit4.html)
 
 ---
+
+## # Bandit Level 4 → Level 5
+The goal of the Bandit Level 5 on OverTheWire is to find the password for the next level. The password is stored in the only human-readable file in the `inhere` directory[^39^].
+
+To find this file, you can use the `file` command, which determines the file type. In Unix-based systems, the `file` command can be used to identify human-readable (i.e., text) files. You can use a wildcard (`*`) to apply the `file` command to all files in the directory:
+
+```bash
+file inhere/*
+```
+
+This command will display the file type of all files in the `inhere` directory. Look for the file that is identified as a text file.
+
+Once you have identified the human-readable file, you can use the `cat` command to display its contents:
+
+```bash
+cat inhere/humanreadablefile
+```
+
+Replace `humanreadablefile` with the actual name of the human-readable file. This command will output the contents of the file, which should be the password for `bandit5`. You can then use this password to log into `bandit5` and proceed with the game.
+
+Here's the command to log into `bandit5` (replace `password` with the actual password you found):
+
+```bash
+ssh bandit5@bandit.labs.overthewire.org -p 2220
+```
+
+After running this command, you'll be prompted for the password. Enter the password you found, and you should be logged in.   [source](https://overthewire.org/wargames/bandit/bandit5.html)
+
+---
