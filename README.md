@@ -1,7 +1,11 @@
 # Welcome to Linux Excercises
+# Table of Contents 
+ 1. [Bandit Level 0](#bandit-level-0) 
+ 2. [Bandit Level 1](#bandit-level-1)
+ 3. [Bandit  Level 2](#bandit-level-2)
 
-## Bandit Level 0
-## [Link](https://overthewire.org/wargames/bandit/bandit0.html)
+## Bandit Level 0 
+(https://overthewire.org/wargames/bandit/bandit0.html)
 The goal of this level on OverTheWire's Bandit game is for you to log into the game using SSH. 
 
 - The host to which you need to connect is `bandit.labs.overthewire.org`.
@@ -21,8 +25,7 @@ After running this command, you'll be prompted for the password. Enter `bandit0`
 
 Please note that if you're using Windows, you might need an SSH client like PuTTY to do this.
 
-## Bandit Level 1 [Link](https://overthewire.org/wargames/bandit/bandit1.html)
-
+## Bandit Level 1 
 The goal of the Bandit Level 1 on OverTheWire is to find the password for the next level. The password is stored in a file called `readme` located in the home directory. Once you find the password, you should use it to log into `bandit1` using SSH[^13^].
 
 To find the password, after you have logged into the game with the credentials for `bandit0`, you can use the `cat` command to read the `readme` file:
@@ -39,11 +42,10 @@ Here's the command to log into `bandit1` (replace `password` with the actual pas
 ssh bandit1@bandit.labs.overthewire.org -p 2220
 ```
 
-After running this command, you'll be prompted for the password. Enter the password you found, and you should be logged in.
+After running this command, you'll be prompted for the password. Enter the password you found, and you should be logged in. [^13^]: [source](https://overthewire.org/wargames/bandit/bandit1.html)
 
-[^13^]: [source](https://overthewire.org/wargames/bandit/bandit1.html)
-
-## Bandit Level # 1 → Level 2
+---
+## Bandit Level 2
 
 The goal of the Bandit Level 2 on OverTheWire is to find the password for the next level. The password is stored in a file named `-` located in the home directory[^21^].
 
@@ -119,7 +121,6 @@ ssh bandit4@bandit.labs.overthewire.org -p 2220
 After running this command, you'll be prompted for the password. Enter the password you found, and you should be logged in.  [^33^]: [source](https://overthewire.org/wargames/bandit/bandit4.html)
 
 ---
-
 ## # Bandit Level 4 → Level 5
 The goal of the Bandit Level 5 on OverTheWire is to find the password for the next level. The password is stored in the only human-readable file in the `inhere` directory[^39^].
 
@@ -148,7 +149,6 @@ ssh bandit5@bandit.labs.overthewire.org -p 2220
 After running this command, you'll be prompted for the password. Enter the password you found, and you should be logged in.   [source](https://overthewire.org/wargames/bandit/bandit5.html)
 
 ---
-
 ## # Bandit Level 5 → Level 6
 
 The goal of the Bandit Level 6 on OverTheWire is to find the password for the next level. The password is stored in a file somewhere under the `inhere` directory and has all of the following properties:
@@ -180,3 +180,4 @@ ssh bandit6@bandit.labs.overthewire.org -p 2220
 ```
 
 After running this command, you'll be prompted for the password. Enter the password you found, and you should be logged in. [^47^]: [source](https://overthewire.org/wargames/bandit/bandit6.html)
+
