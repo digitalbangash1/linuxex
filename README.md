@@ -42,3 +42,23 @@ ssh bandit1@bandit.labs.overthewire.org -p 2220
 After running this command, you'll be prompted for the password. Enter the password you found, and you should be logged in.
 
 [^13^]: [source](https://overthewire.org/wargames/bandit/bandit1.html)
+
+## Bandit Level # 1 → Level 2
+
+The goal of the Bandit Level 2 on OverTheWire is to find the password for the next level. The password is stored in a file named `-` located in the home directory[^21^].
+
+As the file has a special name (`-`), you'll need to provide a path to the `cat` command to avoid interpretation of the `-` as a special character. You can use `./-` to refer to the file in the current directory:
+
+```bash
+cat ./-
+```
+
+This command will output the contents of the file `-`, which should be the password for `bandit2`. You can then use this password to log into `bandit2` and proceed with the game.
+
+Here's the command to log into `bandit2` (replace `password` with the actual password you found):
+
+```bash
+ssh bandit2@bandit.labs.overthewire.org -p 2220
+```
+
+After running this command, you'll be prompted for the password. Enter the password you found, and you should be logged in.   [^21^]: [source](https://overthewire.org/wargames/bandit/bandit2.html)
