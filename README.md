@@ -91,3 +91,31 @@ After running this command, you'll be prompted for the password. Enter the passw
 
 
 ---
+
+## # Bandit Level 3 → Level 4
+
+The goal of the Bandit Level 4 on OverTheWire is to find the password for the next level. The password is stored in a hidden file in the `inhere` directory[^33^].
+
+In Unix-based systems, hidden files start with a dot (`.`), and the `ls` command does not display them by default. However, you can use the `-a` option with `ls` to display all files, including hidden ones:
+
+```bash
+ls -a inhere
+```
+
+This command will list all files in the `inhere` directory, including the hidden one. Once you have the name of the hidden file, you can use the `cat` command to display its contents:
+
+```bash
+cat inhere/.hiddenfile
+```
+
+Replace `.hiddenfile` with the actual name of the hidden file. This command will output the contents of the hidden file, which should be the password for `bandit4`. You can then use this password to log into `bandit4` and proceed with the game.
+
+Here's the command to log into `bandit4` (replace `password` with the actual password you found):
+
+```bash
+ssh bandit4@bandit.labs.overthewire.org -p 2220
+```
+
+After running this command, you'll be prompted for the password. Enter the password you found, and you should be logged in.  [^33^]: [source](https://overthewire.org/wargames/bandit/bandit4.html)
+
+---
